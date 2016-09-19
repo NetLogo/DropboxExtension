@@ -29,7 +29,7 @@ public class DropboxExtension extends org.nlogo.api.DefaultClassManager {
 	static DbxRequestConfig config;
 	static DbxClientV2 client;
 	static long backofftimer;
-	private static final String ACCESS_TOKEN = "";
+	private static final String ACCESS_TOKEN = ""; // Add access token here. You must sign up as a Dropbox developer to get one
 	
 		
 	@Override
@@ -38,7 +38,7 @@ public class DropboxExtension extends org.nlogo.api.DefaultClassManager {
 		pm.addPrimitive("unix-time", new UnixTime());
 		pm.addPrimitive("backoff?", new BackOffCheck());
 		pm.addPrimitive("backoff-timer", new BackOffTimer());
-		config = new DbxRequestConfig("RegrowingChicagoLoyola_S2016", "en_US");
+		config = new DbxRequestConfig("", "en_US"); // add Dropbox folder here
 		client = new DbxClientV2(config, ACCESS_TOKEN);
 		backofftimer = 0;
 	}
